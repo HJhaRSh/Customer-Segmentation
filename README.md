@@ -1,17 +1,19 @@
-# **Customer Segmentation Using K-Means Clustering and Power BI**
 
-This project demonstrates customer segmentation using the **K-Means clustering algorithm** in Python. The insights are visualized using **Power BI** to create an interactive dashboard for analyzing customer behavior and identifying distinct groups for targeted marketing.
+
+# **Market Basket Analysis Using Apriori Algorithm and Power BI**
+
+This project demonstrates **Market Basket Analysis** using the **Apriori algorithm** to identify **frequent itemsets** and generate **association rules**. The insights are visualized using **Power BI** to create an interactive dashboard for analyzing product relationships and customer purchasing behavior.
 
 ---
 
 ## **Project Overview**
 
-- **Objective**: To analyze customer data and group them into meaningful clusters based on their demographics and spending behavior.
-- **Dataset**: [Mall Customer Segmentation Dataset](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python).
+- **Objective**: To identify frequently bought products and generate association rules for understanding relationships between products in a retail dataset.
+- **Dataset**: Custom transaction dataset (CSV or Excel format) containing information about products, quantities, and transaction details.
 - **Techniques Used**:
-  - Data preprocessing and feature scaling.
-  - Determining optimal clusters using the **Elbow Method**.
-  - Applying **K-Means Clustering** for segmentation.
+  - Data preprocessing and feature extraction.
+  - Applying the **Apriori algorithm** for frequent itemset generation.
+  - Evaluating association rules based on **support**, **confidence**, and **lift**.
   - Visualizing insights using Power BI.
 
 ---
@@ -19,43 +21,43 @@ This project demonstrates customer segmentation using the **K-Means clustering a
 ## **Key Features**
 
 1. **Python Implementation**:
-   - Preprocessing the data (handling missing values, encoding categorical variables).
-   - Applying **K-Means Clustering** to segment customers.
-   - Evaluating clustering performance using the **Elbow Method**.
-   - Exporting clustered results to a CSV file for Power BI integration.
+   - **Data Preprocessing**: Cleans and formats transaction data for analysis.
+   - **Frequent Itemset Generation**: Uses the **Apriori algorithm** to discover frequent itemsets.
+   - **Association Rule Mining**: Generates association rules based on key metrics like support, confidence, and lift.
+   - **CSV Export**: Exports the results to a CSV file for further analysis and Power BI integration.
 
 2. **Power BI Visualization**:
-   - **Scatter Plot**: Income vs. Spending Score, colored by cluster.
-   - **Cluster Distribution**: Bar charts or pie charts to represent customer distribution across clusters.
-   - **Demographic Analysis**: Insights into gender and spending patterns within clusters.
+   - **Scatter Plot**: Visualize product associations with metrics like support and confidence.
+   - **Cluster Distribution**: Represent product associations using bar or pie charts.
+   - **Association Analysis**: Explore customer behavior and product relationships through interactive filters.
 
 3. **Insights**:
-   - High-income, high-spending customers: Target for premium products.
-   - Low-income, low-spending customers: Engage with budget-friendly offerings.
-   - Moderate-income customers with average spending: Growth opportunities.
+   - Identifying product pairs that are often bought together.
+   - Recognizing high-confidence product recommendations.
+   - Understanding which products boost sales together.
 
 ---
 
 ## **Project Structure**
 
 - **Python Script**:
-  - `customer_segmentation.py`: Full Python code for data preprocessing, clustering, and CSV export.
+  - `market_basket_analysis.py`: Full Python code for data preprocessing, frequent itemset generation, rule mining, and CSV export.
 
 - **Dataset**:
-  - `Mall_Customers.csv`: Input dataset used for analysis.
+  - `transactions.csv`: Input dataset used for analysis (replace with your own data).
 
 - **Power BI File**:
-  - `Customer_Segmentation_Dashboard.pbix`: Interactive Power BI dashboard.
+  - `Market_Basket_Analysis_Dashboard.pbix`: Interactive Power BI dashboard for exploring the results.
 
 - **Clustered Results**:
-  - `Customer_Segmentation_Results.csv`: CSV file containing customer data with cluster labels.
+  - `association_rules_cleaned.csv`: CSV file containing product associations and their metrics.
 
 ---
 
 ## **Tools & Libraries**
 
 - **Python**:
-  - Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+  - Libraries: `pandas`, `mlxtend`, `scipy`, `tabulate`
 - **Power BI**:
   - For interactive dashboard creation and visualization.
 
@@ -65,36 +67,36 @@ This project demonstrates customer segmentation using the **K-Means clustering a
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/customer-segmentation.git
+   git clone https://github.com/your-username/market-basket-analysis.git
    ```
 
 2. Install the required Python libraries:
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
+   pip install pandas mlxtend scipy tabulate
    ```
 
 3. Run the Python script:
    ```bash
-   python customer_segmentation.py
+   python market_basket_analysis.py
    ```
 
-4. Open `Customer_Segmentation_Dashboard.pbix` in **Power BI Desktop** to view and interact with the dashboard.
+4. Open `Market_Basket_Analysis_Dashboard.pbix` in **Power BI Desktop** to view and interact with the dashboard.
 
 ---
 
 ## **Results**
 
-- **Cluster Distribution**: Number of customers in each segment.
-- **Income vs. Spending Score Analysis**: Identifying distinct customer groups.
-- **Demographic Insights**: Gender and behavioral patterns within clusters.
+- **Frequent Itemsets**: Products frequently bought together.
+- **Association Rules**: Product recommendations based on association rules (e.g., "if A is bought, B is also likely to be bought").
+- **Product Insights**: Insights on customer purchasing behavior and product combinations.
 
 ---
 
 ## **Future Enhancements**
 
-- Add more customer attributes (e.g., age, purchase history) to improve segmentation.
-- Experiment with advanced clustering algorithms like DBSCAN or Hierarchical Clustering.
-- Automate the pipeline for seamless integration between Python and Power BI.
+- Incorporate more advanced recommendation algorithms (e.g., collaborative filtering, content-based filtering).
+- Experiment with alternative algorithms like **FP-growth** for faster frequent itemset generation.
+- Add integration with a real-time transactional system for continuous analysis.
 
 ---
 
@@ -107,3 +109,5 @@ Contributions are welcome! Feel free to open an issue or submit a pull request w
 ## **License**
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
